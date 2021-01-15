@@ -1,10 +1,13 @@
 import React from 'react';
 import '../App.css';
-
-export default function MessageComponent({message, type}) {
+import ButtonComponent from './ButtonComponent';
+//This is a reusable Message component
+export default function MessageComponent({message, type, hideMessage}) {
     return (
         <div className={`message${type}`}>
-            <p>{message}</p>
+           <span> <span>{message}</span>
+           
+           <ButtonComponent style="-transparent" text="close" onClick={hideMessage} /></span>
         </div>
     )
 }

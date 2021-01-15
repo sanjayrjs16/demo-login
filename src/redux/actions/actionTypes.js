@@ -6,3 +6,4 @@ export const SET_PASSWORD = "SET_PASSWORD";
 export const SHOW_LOADER = "SHOW_LOADER";
 export const SHOW_MESSAGE = "SHOW_MESSAGE";
 export const RESET_FIELDS = "RESET_FIELDS";
+export const HIDE_MESSAGE = "HIDE_MESSAGE";

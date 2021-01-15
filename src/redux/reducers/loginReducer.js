@@ -1,6 +1,6 @@
-import {SHOW_LOADER, LOGIN, LOGOUT,RESET_FIELDS, SET_USERNAME, SET_PASSWORD, SHOW_MESSAGE} from '../actions/actionTypes';
+import {SHOW_LOADER, LOGIN, LOGOUT,RESET_FIELDS, SET_USERNAME, SET_PASSWORD, SHOW_MESSAGE, HIDE_MESSAGE} from '../actions/actionTypes';
 
-const initialState = {authenticated: false, username: '', password: '', showMessage: false}
+const initialState = {authenticated: false, username: '', password: '', messageShown: false}
 const loginReducer = (state = initialState, action) => {
     switch(action.type){
         case SET_USERNAME: {
@@ -25,7 +25,7 @@ const loginReducer = (state = initialState, action) => {
         }
         case LOGOUT: {
             return {
-                ...state,  authenticated : false
+                ...state,  authenticated : false, messageShown: false
             }
         }
         case SHOW_LOADER: {
@@ -35,7 +35,12 @@ const loginReducer = (state = initialState, action) => {
         }
         case SHOW_MESSAGE: {
             return {
-                ...state,   showMessage : true
+                ...state,   messageShown : true
+            }
+        }
+        case HIDE_MESSAGE: {
+            return {
+                ...state,   messageShown : false
             }
         }
         default:

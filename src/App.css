@@ -42,13 +42,25 @@ body{
 }
 .message-error{
   
-  color: black;
+  color: rgb(141, 13, 13);
   padding: 0.1rem;
   margin: auto;
   margin-bottom: 2rem;
   width: 60%;
   border: 0.2rem solid rgb(219, 22, 22);
-  background-color: #f18383;
+  background-color: #f09c9c;
+}
+.message-success{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: rgb(1, 100, 50);
+  padding: 0.1rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  width: 60%;
+  border: 0.2rem solid rgb(143, 253, 189);
+  background-color: #b2ebb7;
 }
 input{
   padding: 0.3rem;
@@ -57,9 +69,79 @@ input{
   margin-bottom: 0.5rem;
 }
 .submit{
-  background-color: rgb(155, 187, 228);
+  background-color: rgb(247, 188, 155);
   padding: 0.7rem;
-  border-radius: 8%;
-  border:  0.1rem solid rgb(99, 117, 175);
-  font-style: italic;
+  border-radius: 2%;
+  width: 10%;
+  color: rgb(124, 41, 8);
+  border:  0.3rem solid  rgb(236, 101, 48);
+  font-style: oblique;
+  font-weight: bold;
+  font-size: medium;
+}
+.user-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.user-card{
+ background-color: antiquewhite;
+ padding: 1rem;
+ margin: 2rem;
+ border:  0.3rem solid  #f18383;
+
+}
+.user-card:hover{
+  transform: scale(1.1);
+}
+.user-icon{
+  
+  background-color: #61dafb;
+  
+  height: 10rem;
+  padding: 0.1em;
+  margin: .2em;
+}
+.user-label{
+  color: #f18383;
+  text-align: left;
+  margin: auto;
+}
+.button-transparent{
+  color: rgb(255, 255, 255);;
+  padding: 0.2rem;
+  margin: 2rem;
+  border:  0.2rem solid  rgb(0, 0, 0);
+  border-radius: 5%;
+  font-style: oblique;
+  background-color:rgb(141, 13, 13);
+  font-weight: bold;
+  font-size: medium;
+}
+.button-transparent:hover{
+  transform: scale(1.1);
+}
+.button-block{
+  background-color: rgb(245, 190, 176);
+  color:rgb(141, 13, 13);;
+  padding: .2rem;
+  margin: 2rem;
+  border:  0.3rem solid  rgb(141, 13, 13);;
+  font-style: oblique;
+  border-radius: 5%;
+  font-weight: bold;
+  font-size: medium;
+}
+.button-block:hover{
+  transform: scale(1.1);
+}
+.dashboard{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: none;
+  margin: 0%;
 }

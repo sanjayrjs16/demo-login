@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from "react-redux";
 import DashboardComponent from '../components/DashboardComponent';
 import LoginComponent from '../components/LoginComponent';
-import { setUsername, setPassword, checkCredAsync, showMessage } from '../redux/actions/actionCreators';
+import { setUsername, setPassword, checkCredAsync, showMessage, hideMessage, logOut, fetchUsersAsync } from '../redux/actions/actionCreators';
 
 
 class ProfileContainer extends Component {
@@ -26,7 +26,7 @@ return {
     username: state.login.username,
     password: state.login.password,
     showLoader: state.login.showLoader,
-    loginError : state.login.loginError
+    messageShown : state.login.messageShown
     
 }
 }
@@ -35,7 +35,10 @@ const mapDispatchToProps = (dispatch) => {
         setUsername: (username) => dispatch(setUsername(username)),
         setPassword: (password) => dispatch(setPassword(password)),
         checkCredAsync: (username, password) => dispatch(checkCredAsync(username, password)),
-        showMessage: () => dispatch(showMessage())
+        showMessage: () => dispatch(showMessage()),
+        hideMessage: () => dispatch(hideMessage()),
+        logOut: () => dispatch(logOut()),
+        fetchUsersAsync: () => dispatch(fetchUsersAsync())
         
     }
 }

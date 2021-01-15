@@ -1,4 +1,4 @@
-import {LOGIN, LOGOUT, SET_USERNAME, SET_PASSWORD, SHOW_LOADER, SHOW_MESSAGE, RESET_FIELDS} from './actionTypes';
+import {LOGIN, LOGOUT, SET_USERNAME, SET_PASSWORD, SHOW_LOADER, SHOW_MESSAGE, HIDE_MESSAGE,  RESET_FIELDS} from './actionTypes';
 
 
 export const setUsername = (username) => {
@@ -26,7 +26,7 @@ export const loggedIn = () => {
     }
 }
 
-export const loggedOut = () => {
+export const logOut = () => {
     return {
         type: LOGOUT
             }
@@ -42,6 +42,12 @@ export const showMessage = () => {
         type: SHOW_MESSAGE
     }
 };
+export const hideMessage = () => {
+    return {
+        type: HIDE_MESSAGE
+    }
+};
+    
     
 export const checkCredAsync = (username, password) => {
     return async (dispatch) => {
@@ -57,6 +63,7 @@ export const checkCredAsync = (username, password) => {
                setTimeout(() => {
                 dispatch(showLoader());
                 dispatch(loggedIn());
+                dispatch(showMessage());
                }, 2000);
             }
             else{
@@ -72,4 +79,15 @@ export const checkCredAsync = (username, password) => {
         
     }
 };
+export const fetchUsersAsync = () => {
+    return async (dispatch) => {
+        let res = await fetch("https://sanjayrjs16.github.io/mock-rest-api/users.json");
+        if(res.ok){
+            let {user: users} = await res.json();
+            console.log(users);
+            return users
+        }  
+
+    }
+}
     
