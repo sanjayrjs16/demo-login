@@ -89,7 +89,7 @@ input{
  background-color: antiquewhite;
  padding: 1rem;
  margin: 2rem;
- border:  0.3rem solid  #f18383;
+ border:  0.3rem solid  #000000;
 
 }
 .user-card:hover{
@@ -109,13 +109,13 @@ input{
   margin: auto;
 }
 .button-transparent{
-  color: rgb(255, 255, 255);;
+  color: rgb(248, 230, 230);;
   padding: 0.2rem;
   margin: 2rem;
-  border:  0.2rem solid  rgb(0, 0, 0);
+  border:  0.2rem solid #f5a4a4;
   border-radius: 5%;
   font-style: oblique;
-  background-color:rgb(141, 13, 13);
+  background-color:rgb(129, 24, 24);
   font-weight: bold;
   font-size: medium;
 }
