@@ -2,7 +2,7 @@
 This is the completed version of the task.
 It is hosted live via gitHub pages at https://sanjayrjs16.github.io/demo-login/
 
-# Aproach
+# Approach
 
 1. So first thing I did was to hoist the two JSON files on github pages, to mock a REST API.
 (https://github.com/sanjayrjs16/mock-rest-api)It's accessible via the end points https://sanjayrjs16.github.io/mock-rest-api/users.json (for user list)
