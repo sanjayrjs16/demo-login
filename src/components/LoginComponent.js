@@ -49,8 +49,9 @@ export default class LoginComponent extends React.Component {
         const {username, password, showLoader, messageShown, hideMessage } = this.props.props;
         console.log("COmponent rendered", username," ", password);
         return(
-            <div>
-                <h1>Login</h1>
+            <>
+            <div className="login-card">
+            <h1>Login</h1>
                 {showLoader && <img src={logo} className={"App-logo"}/>}
                 {messageShown && <MessageComponent type={"-error"} message="Incorrect Username or password ! Please try again" hideMessage={hideMessage}/>}
                 <form onSubmit={(e) => this.handleSubmit(e, username, password)}> 
@@ -60,6 +61,7 @@ export default class LoginComponent extends React.Component {
                 </form>
                
             </div>
+            </>
         );
     }
 }

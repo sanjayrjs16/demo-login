@@ -40,6 +40,9 @@ body{
     transform: rotate(360deg);
   }
 }
+.login-card{
+  margin-top: 12rem;
+}
 .message-error{
   
   color: rgb(141, 13, 13);
@@ -63,14 +66,16 @@ body{
   background-color: #b2ebb7;
 }
 input{
-  padding: 0.3rem;
+  width: 20%;
+  padding: 0.6rem;
   display: block;
   margin: auto;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.9rem;
+  border: 0.19rem solid rgb(0, 0, 0);
 }
 .submit{
   background-color: rgb(247, 188, 155);
-  padding: 0.7rem;
+  padding: 0.6rem;
   border-radius: 2%;
   width: 10%;
   color: rgb(124, 41, 8);
@@ -86,9 +91,10 @@ input{
   flex-wrap: wrap;
 }
 .user-card{
- background-color: antiquewhite;
+ background-color: rgb(241, 233, 222);
  padding: 1rem;
  margin: 2rem;
+ box-shadow: .8rem .4rem #181414;  
  border:  0.3rem solid  #000000;
 
 }
@@ -109,13 +115,13 @@ input{
   margin: auto;
 }
 .button-transparent{
-  color: rgb(248, 230, 230);;
+  color: rgb(61, 24, 24);
   padding: 0.2rem;
   margin: 2rem;
-  border:  0.2rem solid #f5a4a4;
+  border:  0.2rem solid #412727;
   border-radius: 5%;
   font-style: oblique;
-  background-color:rgb(129, 24, 24);
+  background-color:rgb(240, 223, 223);
   font-weight: bold;
   font-size: medium;
 }
@@ -123,11 +129,12 @@ input{
   transform: scale(1.1);
 }
 .button-block{
-  background-color: rgb(245, 190, 176);
-  color:rgb(141, 13, 13);;
-  padding: .2rem;
+  background-color:rgb(44, 8, 4);
+  color:rgb(240, 223, 223);
+  padding: .5rem;
   margin: 2rem;
-  border:  0.3rem solid  rgb(141, 13, 13);;
+  border:  0.3rem solid rgb(44, 8, 4);
+  box-shadow: none;
   font-style: oblique;
   border-radius: 5%;
   font-weight: bold;
